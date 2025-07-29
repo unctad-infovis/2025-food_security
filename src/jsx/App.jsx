@@ -35,7 +35,7 @@ function App() {
       <div className="title_container">
         <img src="https://static.dwcdn.net/custom/themes/unctad-2024-rebrand/Blue%20arrow.svg" className="logo" alt="UN Trade and Development logo" />
         <div className="title">
-          <h3>After decades of decline, undernourishment is on the rise again</h3>
+          <h3>After decades of decline, undernourishment still above pre-Covid levels</h3>
           <h4>
             Evolution of FAO Cereals Price Index, base 2014–2016, and prevalence of undernourishment, percentage, 2000–2024
           </h4>
