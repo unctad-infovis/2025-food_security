@@ -41,7 +41,7 @@ const LineChart = forwardRef((props, ref) => {
           color: 'rgba(0, 0.0, 0.0, 0.8)',
           fontSize: '13px'
         },
-        text: '<em>Source:</em> UN Trade and Development (UNCTAD) based on FAO Cereals Price Index and FAOSTAT.<br/><em>Note:</em> The data for the "prevalence of undernourishment" indicator was only available until 2022.',
+        text: '<em>Source:</em> UN Trade and Development (UNCTAD) based on FAO Cereals Price Index and FAOSTAT.<br/><em>Note:</em> The data for the “prevalence of undernourishment” indicator is available until 2024. Cereal price index for 2025: January – July 2025.',
         useHTML: true,
         verticalAlign: 'bottom',
         x: 0
