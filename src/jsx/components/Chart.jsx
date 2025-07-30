@@ -81,6 +81,9 @@ const LineChart = forwardRef((props, ref) => {
         verticalAlign: 'top'
       },
       plotOptions: {
+        series: {
+          pointStart: 2000
+        },
         line: {
           allowPointSelect: false,
           animation: {
@@ -90,7 +93,7 @@ const LineChart = forwardRef((props, ref) => {
           dataLabels: {
             enabled: false
           },
-          enableMouseTracking: false,
+          enableMouseTracking: true,
           lineWidth: 5,
           marker: {
             enabled: false,
@@ -113,20 +116,14 @@ const LineChart = forwardRef((props, ref) => {
           dataLabels: {
             enabled: false
           },
-          enableMouseTracking: false,
-          lineWidth: 6,
-          marker: {
-            enabled: false,
-            states: {
-              hover: {
-                enabled: false
-              },
-              select: {
-                enabled: false
-              }
+          enableMouseTracking: true,
+          groupPadding: 0,
+          states: {
+            hover: {
+              enabled: false
             }
           }
-        },
+        }
       },
       series: [
         {
@@ -151,7 +148,13 @@ const LineChart = forwardRef((props, ref) => {
         text: undefined
       },
       tooltip: {
-        enabled: false
+        headerFormat: '<span style="font-size: 18px;"><strong>{point.x}</strong></span><br />',
+        shared: true,
+        style: {
+          color: '#000',
+          fontFamily: 'Inter',
+          fontSize: '15px'
+        }
       },
       xAxis: {
         crosshair: {
@@ -160,11 +163,6 @@ const LineChart = forwardRef((props, ref) => {
         },
         labels: {
           distance: 10,
-          formatter() {
-            const element = this;
-            const label = element.axis.defaultLabelFormatter.call(element);
-            return parseInt(label, 10) + 2000;
-          },
           padding: 0,
           rotation: 0,
           style: {
@@ -211,7 +209,7 @@ const LineChart = forwardRef((props, ref) => {
         tickInterval: 20,
         title: {
           align: 'high',
-          enabled: true,
+          enabled: false,
           offset: 0,
           reserveSpace: false,
           rotation: 0,
