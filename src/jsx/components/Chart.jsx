@@ -105,6 +105,14 @@ const LineChart = forwardRef((props, ref) => {
                 enabled: false
               }
             }
+          },
+          states: {
+            hover: {
+              enabled: false
+            },
+            inactive: {
+              enabled: false
+            }
           }
         },
         column: {
