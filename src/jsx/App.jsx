@@ -15,7 +15,7 @@ function App() {
   const chartRef = useRef(null);
 
   useEffect(() => {
-    const data_file = (window.location.href.includes('unctad.org')) ? '/sites/default/files/data-file/2025-food_security.json' : './assets/data/data.json';
+    const data_file = `${(window.location.href.includes('unctad.org')) ? 'https://storage.unctad.org/2025-food_security/' : (window.location.href.includes('localhost:80')) ? './' : 'https://unctad-infovis.github.io/2025-food_security/'}assets/data/data.json`;
     try {
       fetch(data_file)
         .then((response) => {
@@ -41,9 +41,7 @@ function App() {
           </h4>
         </div>
       </div>
-      {
-        data && <Chart data={[data]} idx="1" ref={chartRef} />
-      }
+      {data && <Chart data={[data]} idx="1" ref={chartRef} />}
     </div>
   );
 }
